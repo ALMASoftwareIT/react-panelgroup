@@ -12,7 +12,7 @@
     "umd"
   ],
   "scripts": {
-    "build": "nwb build-react-component",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && nwb build-react-component",
     "clean": "nwb clean-module && npm clean-demo",
     "start": "nwb serve-react-demo",
     "test": "npm run lint && nwb test",
@@ -25,7 +25,7 @@
     "prop-types": "^15.6.1"
   },
   "peerDependencies": {
-    "react": "16.x || 15.x"
+    "react": "19.x || 16.x || 15.x"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
@@ -36,8 +36,8 @@
     "eslint-plugin-react": "^7.7.0",
     "gh-pages": "^0.11.0",
     "nwb": "0.22.x",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "author": "Dan Fessler",
   "homepage": "http://www.DanFessler.com",

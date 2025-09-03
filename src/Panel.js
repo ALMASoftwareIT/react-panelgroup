@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default class Panel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.resizeObject = React.createRef();
+  }
   static propTypes = {
     resize: PropTypes.string,
     onWindowResize: PropTypes.func,
@@ -17,15 +21,15 @@ export default class Panel extends React.Component {
   // Find the resizeObject if it has one
   componentDidMount() {
     if (this.props.resize === 'stretch') {
-      this.refs.resizeObject.addEventListener('load', () => this.onResizeObjectLoad());
-      this.refs.resizeObject.data = 'about:blank';
+      this.resizeObject.current.addEventListener('load', () => this.onResizeObjectLoad());
+      this.resizeObject.current.data = 'about:blank';
       this.calculateStretchWidth(); // this.onNextFrame(this.calculateStretchWidth);
     }
   }
 
   // Attach resize event listener to resizeObject
   onResizeObjectLoad = () => {
-    this.refs.resizeObject.contentDocument.defaultView.addEventListener('resize', () =>
+    this.resizeObject.current.contentDocument.defaultView.addEventListener('resize', () =>
       this.calculateStretchWidth()
     );
   };
@@ -70,7 +74,7 @@ export default class Panel extends React.Component {
 
     // only attach resize object if panel is stretchy.  Others dont need it
     return this.props.resize === 'stretch' ? (
-      <object aria-label="panel" style={style.resizeObject} ref="resizeObject" type="text/html" />
+      <object aria-label="panel" style={style.resizeObject} ref={this.resizeObject} type="text/html" />
     ) : null;
   }
 

@@ -1,7 +1,7 @@
 {
-  "name": "react-panelgroup",
-  "version": "1.0.12",
-  "description": "react-panelgroup React component",
+  "name": "@almasoftwareit/react-panelgroup",
+  "version": "2.0.1",
+  "description": "based on the react-panelgroup React component",
   "main": "lib/index.js",
   "jsnext:main": "es/index.js",
   "module": "es/index.js",
@@ -39,10 +39,10 @@
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },
-  "author": "Dan Fessler",
-  "homepage": "http://www.DanFessler.com",
+  "author": "almasoftwareit",
+  "homepage": "http://www.almasoft.it/",
   "license": "MIT",
-  "repository": "https://github.com/DanFessler/react-panelgroup",
+  "repository": "https://github.com/ALMASoftwareIT/react-panelgroup",
   "keywords": [
     "react-component"
   ]

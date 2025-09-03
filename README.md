@@ -2,6 +2,9 @@
 
 A React component for resizable panel group layouts<br/>
 
+Based on the original [https://www.npmjs.com/package/react-panelgroup](react-panelgroup) component.
+
+
 Demo: [https://danfessler.github.io/react-panelgroup/](https://danfessler.github.io/react-panelgroup/)
 
 [build-badge]: https://img.shields.io/travis/DanFessler/react-panelgroup/master.svg?style=flat
